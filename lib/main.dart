@@ -1,3 +1,4 @@
+import 'package:app_navegacion/pages/pagina02.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,11 +11,21 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: const MyHomePage(title:'Pagina 01:     Navegeacion :D'),
     );
   }
+}
+
+class MyHomePage extends StatefulWidget{
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
 }
