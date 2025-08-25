@@ -16,16 +16,39 @@ class MainApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title:'Pagina 01:     Navegeacion :D'),
+      home: const MyHomePage(title: 'Pagina 01:     Navegeacion :D'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget{
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(widget.title)),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Home'),
+            ElevatedButton(
+                child: Text('Ir a la pagina 2'),
+                onPressed: () => {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Pagina02())),
+                    })
+          ],
+        ),
+      ),
+    );
+  }
 }
