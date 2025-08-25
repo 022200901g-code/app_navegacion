@@ -6,20 +6,17 @@ class Pagina02 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Estas en la Pagina 02')
-        ),
-      body: padding(
+      appBar: AppBar(title: Text('Estas en la Pagina 02')),
+      body: Padding(
         padding: const EdgeInsets.all(20),
-        child: Center(
-          child: Column(
-            children: [
-              Text(
-                "Hola 1"
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              ),
-            ],
-          ),
+        child: Column(
+          children: [
+            Text(
+              "Hola 1",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
     );
   }
